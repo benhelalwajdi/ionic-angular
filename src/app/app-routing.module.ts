@@ -8,8 +8,21 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'recipes',
     pathMatch: 'full'
+  },
+  {
+    path: 'recipes',
+    children:[
+      {
+        path: '',
+        loadChildren: () => import('./recipes/recipes.module').then( m => m.RecipesPageModule)
+      },
+      {
+        path: ':recipeId',
+        loadChildren: () => import('./recipes/recipes-details/recipes-details.module').then( m => m.RecipesDetailsPageModule)
+      }
+    ]
   },
 ];
 
