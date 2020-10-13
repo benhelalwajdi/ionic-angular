@@ -21,6 +21,14 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'developers',
+    loadChildren: () => import('./pages/developers/developers.module').then( m => m.DevelopersPageModule)
+  },
+  {
+    path: 'developer',
+    loadChildren: () => import('./pages/developer/developer.module').then( m => m.DeveloperPageModule)
+  },
 ];
 
 @NgModule({
