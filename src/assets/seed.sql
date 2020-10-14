@@ -1,13 +1,12 @@
-create Table if not exists developer(id integer primary key autoincrement , name text, skills text, img text);
-    insert or ignore into developer value (1, 'simon', '', '');
-    insert or ignore into developer value (2, 'simon', '', '');
-    insert or ignore into developer value (3, 'simon', '', '');
-    
-
-create Table if not exists product (id integer primary key autoincrement, name text, creatorId integer);
-    insert or ignore into product (id, name, creatorId) value (1,'IonicnAcademy', 1);
-    insert or ignore into product (id, name, creatorId) value (2,'Software Startup Manual', 1);
-    insert or ignore into product (id, name, creatorId) value (3,'Ionic Framework', 2);
-    insert or ignore into product (id, name, creatorId) value (4,'Ionic Framework', 2);
-    insert or ignore into product (id, name, creatorId) value (5,'Drifty Co', 3);
-    insert or ignore into product (id, name, creatorId) value (6,'Ionicons', 1);
+CREATE TABLE IF NOT EXISTS developer(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,skills TEXT,img TEXT);
+INSERT or IGNORE INTO developer VALUES (1, 'Simon', '', 'https://pbs.twimg.com/profile_images/858987821394210817/oMccbXv6_bigger.jpg');
+INSERT or IGNORE INTO developer VALUES (2, 'Max', '', 'https://pbs.twimg.com/profile_images/953978653624455170/j91_AYfd_400x400.jpg');
+INSERT or IGNORE INTO developer VALUES (3, 'Ben', '', 'https://pbs.twimg.com/profile_images/1060037170688417792/vZ7iAWXV_400x400.jpg');
+ 
+CREATE TABLE IF NOT EXISTS product(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT, creatorId INTEGER);
+INSERT or IGNORE INTO product(id, name, creatorId) VALUES (1, 'Ionic Academy', 1);
+INSERT or IGNORE INTO product(id, name, creatorId) VALUES (2, 'Software Startup Manual', 1);
+INSERT or IGNORE INTO product(id, name, creatorId) VALUES (3, 'Ionic Framework', 2);
+INSERT or IGNORE INTO product(id, name, creatorId) VALUES (4, 'Drifty Co', 2);
+INSERT or IGNORE INTO product(id, name, creatorId) VALUES (5, 'Drifty Co', 3);
+INSERT or IGNORE INTO product(id, name, creatorId) VALUES (6, 'Ionicons', 3);
